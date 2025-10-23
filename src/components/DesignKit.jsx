@@ -207,7 +207,6 @@ export default function DesignKit() {
 
       <div className="wrap">
         <header className="hero">
-          <span className="tag">Whimsical • Playful • Human</span>
           <h1 className="title">Patsy Lin — Joyful Web Things</h1>
           <svg className="scribble" viewBox="0 0 560 18" fill="none">
             <path
@@ -229,7 +228,7 @@ export default function DesignKit() {
           </p>
         </header>
 
-        <section className="section">
+        {/* <section className="section">
           <h2>1) Color Palette</h2>
           <div className="swatches">
             {[
@@ -273,7 +272,7 @@ export default function DesignKit() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* === Portfolio Sections === */}
         <ProjectList />

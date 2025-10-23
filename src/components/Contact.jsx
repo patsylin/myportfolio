@@ -57,7 +57,7 @@ export default function Contact() {
             Got a role, project, or idea? I’d love to chat.
           </p>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-            <a className="pill" href="mailto:patsylinhutchison@gmail.com">
+            <a className="pill" href="mailto:pohutchison@gmail.com">
               Email me
             </a>
             <a
