@@ -149,6 +149,7 @@ export default function DesignKit() {
       `}</style>
 
       <div className="graffiti-layer cursor-sparkle" aria-hidden>
+        {/* floating doodles */}
         <svg
           className="float-slow"
           width="140"
@@ -157,13 +158,11 @@ export default function DesignKit() {
           viewBox="0 0 100 100"
           fill="none"
         >
-          <g>
-            <path
-              d="M50 8 L58 34 L86 34 L62 50 L70 78 L50 60 L30 78 L38 50 L14 34 L42 34 Z"
-              fill="#FF9CCF"
-              opacity="0.9"
-            />
-          </g>
+          <path
+            d="M50 8 L58 34 L86 34 L62 50 L70 78 L50 60 L30 78 L38 50 L14 34 L42 34 Z"
+            fill="#FF9CCF"
+            opacity="0.9"
+          />
         </svg>
         <svg
           className="float-med"
@@ -276,45 +275,10 @@ export default function DesignKit() {
           </div>
         </section>
 
-        <section className="section">
-          <h2>
-            <ProjectList />
-            <About />
-            <Contact />
-          </h2>
-          <div className="bubbles">
-            <article className="bubble">
-              <span className="pill">Project</span>
-              <h3>Strangers Things</h3>
-              <p>
-                Craigslist‑inspired marketplace with modern UX. React, Vite,
-                custom API.
-              </p>
-            </article>
-            <article className="bubble">
-              <span className="pill" style={{ background: "var(--lemon)" }}>
-                Project
-              </span>
-              <h3>Twinstagram</h3>
-              <p>
-                Simple, cute photo‑sharing clone with dynamic image pools and
-                captions.
-              </p>
-            </article>
-            <article className="bubble">
-              <span
-                className="pill"
-                style={{ background: "var(--lavender)", color: "white" }}
-              >
-                Project
-              </span>
-              <h3>TeacherTime (WIP)</h3>
-              <p>
-                K‑8 teacher scheduling & sub matching tool. Postgres + Express.
-              </p>
-            </article>
-          </div>
-        </section>
+        {/* === Portfolio Sections === */}
+        <ProjectList />
+        <About />
+        <Contact />
 
         <section className="section">
           <h2>3) Mascot Concept — "Pip" the Helpful Blob</h2>
@@ -390,12 +354,13 @@ export default function DesignKit() {
             </li>
             <li>
               <b>Scribble reveal:</b> duplicate the underline SVG and adjust the
-              path curve; the keyframe <code>draw</code> animates
-              stroke-dashoffset.
+              path curve; the keyframe <code>draw</code> animates{" "}
+              <code>stroke-dashoffset</code>.
             </li>
             <li>
-              <b>Bubbles:</b> replace with your real projects; non-rectangular
-              feel comes from the uneven border-radius and paint-stroke header.
+              <b>Bubbles:</b> replace with your real projects; the
+              non-rectangular feel comes from the uneven border-radius and
+              paint-stroke header.
             </li>
             <li>
               <b>Mascot:</b> tweak the blob path points or gradient colours to
