@@ -1,4 +1,7 @@
 import React, { useEffect } from "react";
+import ProjectList from "./ProjectList.jsx";
+import About from "./About.jsx";
+import Contact from "./Contact.jsx";
 
 /**
  * Patsy Lin — Whimsical Graffiti Design Kit v1
@@ -146,20 +149,60 @@ export default function DesignKit() {
       `}</style>
 
       <div className="graffiti-layer cursor-sparkle" aria-hidden>
-        <svg className="float-slow" width="140" height="140" style={{ left: '6%', top: '10%' }} viewBox="0 0 100 100" fill="none">
+        <svg
+          className="float-slow"
+          width="140"
+          height="140"
+          style={{ left: "6%", top: "10%" }}
+          viewBox="0 0 100 100"
+          fill="none"
+        >
           <g>
-            <path d="M50 8 L58 34 L86 34 L62 50 L70 78 L50 60 L30 78 L38 50 L14 34 L42 34 Z" fill="#FF9CCF" opacity="0.9"/>
+            <path
+              d="M50 8 L58 34 L86 34 L62 50 L70 78 L50 60 L30 78 L38 50 L14 34 L42 34 Z"
+              fill="#FF9CCF"
+              opacity="0.9"
+            />
           </g>
         </svg>
-        <svg className="float-med" width="200" height="200" style={{ right: '8%', top: '22%' }} viewBox="0 0 100 100" fill="none">
+        <svg
+          className="float-med"
+          width="200"
+          height="200"
+          style={{ right: "8%", top: "22%" }}
+          viewBox="0 0 100 100"
+          fill="none"
+        >
           <circle cx="50" cy="50" r="34" fill="#CBB2FF" />
           <circle cx="70" cy="30" r="10" fill="#FFF8B8" />
         </svg>
-        <svg className="float-fast" width="180" height="160" style={{ left: '12%', bottom: '12%' }} viewBox="0 0 200 160" fill="none">
-          <path d="M10 80 C30 10, 170 10, 190 80 S170 150, 100 140  -10 150, 10 80 Z" fill="#9CFFE0"/>
+        <svg
+          className="float-fast"
+          width="180"
+          height="160"
+          style={{ left: "12%", bottom: "12%" }}
+          viewBox="0 0 200 160"
+          fill="none"
+        >
+          <path
+            d="M10 80 C30 10, 170 10, 190 80 S170 150, 100 140  -10 150, 10 80 Z"
+            fill="#9CFFE0"
+          />
         </svg>
-        <svg className="float-med" width="160" height="120" style={{ right: '10%', bottom: '10%' }} viewBox="0 0 160 120" fill="none">
-          <path d="M8 60 Q40 10 80 60 T152 60" stroke="#8AE7FF" strokeWidth="12" strokeLinecap="round"/>
+        <svg
+          className="float-med"
+          width="160"
+          height="120"
+          style={{ right: "10%", bottom: "10%" }}
+          viewBox="0 0 160 120"
+          fill="none"
+        >
+          <path
+            d="M8 60 Q40 10 80 60 T152 60"
+            stroke="#8AE7FF"
+            strokeWidth="12"
+            strokeLinecap="round"
+          />
         </svg>
       </div>
 
@@ -168,31 +211,42 @@ export default function DesignKit() {
           <span className="tag">Whimsical • Playful • Human</span>
           <h1 className="title">Patsy Lin — Joyful Web Things</h1>
           <svg className="scribble" viewBox="0 0 560 18" fill="none">
-            <path d="M2 14 Q 100 2, 200 10 T 360 8 T 560 14" stroke="url(#g)" strokeWidth="6" strokeLinecap="round"/>
+            <path
+              d="M2 14 Q 100 2, 200 10 T 360 8 T 560 14"
+              stroke="url(#g)"
+              strokeWidth="6"
+              strokeLinecap="round"
+            />
             <defs>
               <linearGradient id="g" x1="0" x2="1" y1="0" y2="0">
-                <stop offset="0%" stopColor="#FF9CCF"/>
-                <stop offset="100%" stopColor="#CBB2FF"/>
+                <stop offset="0%" stopColor="#FF9CCF" />
+                <stop offset="100%" stopColor="#CBB2FF" />
               </linearGradient>
             </defs>
           </svg>
-          <p className="lead">I build small apps with big heart — colourful, accessible, a little bit magical.</p>
+          <p className="lead">
+            I build small apps with big heart — colourful, accessible, a little
+            bit magical.
+          </p>
         </header>
 
         <section className="section">
           <h2>1) Color Palette</h2>
           <div className="swatches">
             {[
-              { name: 'Bubblegum Pink', hex: '#FF9CCF' },
-              { name: 'Sky Lavender', hex: '#CBB2FF' },
-              { name: 'Lemon Cream', hex: '#FFF8B8' },
-              { name: 'Mint Glow', hex: '#9CFFE0' },
-              { name: 'Soft Sky', hex: '#8AE7FF' },
-              { name: 'Midnight Ink', hex: '#181826' },
+              { name: "Bubblegum Pink", hex: "#FF9CCF" },
+              { name: "Sky Lavender", hex: "#CBB2FF" },
+              { name: "Lemon Cream", hex: "#FFF8B8" },
+              { name: "Mint Glow", hex: "#9CFFE0" },
+              { name: "Soft Sky", hex: "#8AE7FF" },
+              { name: "Midnight Ink", hex: "#181826" },
             ].map((s) => (
               <div className="swatch" key={s.hex}>
                 <div className="tone" style={{ background: s.hex }} />
-                <div className="meta"><span>{s.name}</span><code>{s.hex}</code></div>
+                <div className="meta">
+                  <span>{s.name}</span>
+                  <code>{s.hex}</code>
+                </div>
               </div>
             ))}
           </div>
@@ -203,35 +257,61 @@ export default function DesignKit() {
           <div className="typo-grid">
             <div className="typo-card">
               <div className="display">Display: Caveat Brush</div>
-              <p className="body">Use for big headlines and graffiti-style words.</p>
+              <p className="body">
+                Use for big headlines and graffiti-style words.
+              </p>
             </div>
             <div className="typo-card">
               <div className="accent">Accent: Gloria Hallelujah</div>
-              <p className="body">Use for playful subheads, callouts, stickers.</p>
+              <p className="body">
+                Use for playful subheads, callouts, stickers.
+              </p>
             </div>
             <div className="typo-card">
-              <div className="body"><b>Body: Nunito</b> — Friendly, highly readable. Great for paragraphs and UI text.</div>
+              <div className="body">
+                <b>Body: Nunito</b> — Friendly, highly readable. Great for
+                paragraphs and UI text.
+              </div>
             </div>
           </div>
         </section>
 
         <section className="section">
-          <h2>2) Motion & Non‑Boxy Project Bubbles</h2>
+          <h2>
+            <ProjectList />
+            <About />
+            <Contact />
+          </h2>
           <div className="bubbles">
             <article className="bubble">
               <span className="pill">Project</span>
               <h3>Strangers Things</h3>
-              <p>Craigslist‑inspired marketplace with modern UX. React, Vite, custom API.</p>
+              <p>
+                Craigslist‑inspired marketplace with modern UX. React, Vite,
+                custom API.
+              </p>
             </article>
             <article className="bubble">
-              <span className="pill" style={{ background: 'var(--lemon)' }}>Project</span>
+              <span className="pill" style={{ background: "var(--lemon)" }}>
+                Project
+              </span>
               <h3>Twinstagram</h3>
-              <p>Simple, cute photo‑sharing clone with dynamic image pools and captions.</p>
+              <p>
+                Simple, cute photo‑sharing clone with dynamic image pools and
+                captions.
+              </p>
             </article>
             <article className="bubble">
-              <span className="pill" style={{ background: 'var(--lavender)', color: 'white' }}>Project</span>
+              <span
+                className="pill"
+                style={{ background: "var(--lavender)", color: "white" }}
+              >
+                Project
+              </span>
               <h3>TeacherTime (WIP)</h3>
-              <p>K‑8 teacher scheduling & sub matching tool. Postgres + Express.</p>
+              <p>
+                K‑8 teacher scheduling & sub matching tool. Postgres + Express.
+              </p>
             </article>
           </div>
         </section>
@@ -242,25 +322,58 @@ export default function DesignKit() {
             <svg className="mascot" viewBox="0 0 300 240" fill="none">
               <defs>
                 <radialGradient id="grad" cx="50%" cy="45%" r="70%">
-                  <stop offset="0%" stopColor="#FFB8E4"/>
-                  <stop offset="100%" stopColor="#FF9CCF"/>
+                  <stop offset="0%" stopColor="#FFB8E4" />
+                  <stop offset="100%" stopColor="#FF9CCF" />
                 </radialGradient>
               </defs>
-              <path d="M40 140 C 20 80, 90 30, 150 40 C 210 50, 270 90, 250 150 C 230 210, 120 220, 80 190 C 55 172, 60 170, 40 140 Z" fill="url(#grad)" stroke="#18182620" strokeWidth="2"/>
-              <ellipse className="blink" cx="120" cy="120" rx="10" ry="12" fill="#181826"/>
-              <ellipse className="blink" cx="180" cy="120" rx="10" ry="12" fill="#181826"/>
-              <path d="M120 150 Q150 170 180 150" stroke="#181826" strokeWidth="6" strokeLinecap="round" fill="none"/>
+              <path
+                d="M40 140 C 20 80, 90 30, 150 40 C 210 50, 270 90, 250 150 C 230 210, 120 220, 80 190 C 55 172, 60 170, 40 140 Z"
+                fill="url(#grad)"
+                stroke="#18182620"
+                strokeWidth="2"
+              />
+              <ellipse
+                className="blink"
+                cx="120"
+                cy="120"
+                rx="10"
+                ry="12"
+                fill="#181826"
+              />
+              <ellipse
+                className="blink"
+                cx="180"
+                cy="120"
+                rx="10"
+                ry="12"
+                fill="#181826"
+              />
+              <path
+                d="M120 150 Q150 170 180 150"
+                stroke="#181826"
+                strokeWidth="6"
+                strokeLinecap="round"
+                fill="none"
+              />
               <g transform="translate(210,80)">
-                <circle cx="0" cy="0" r="10" fill="#FFF8B8"/>
-                <circle cx="0" cy="0" r="5" fill="#FFFFFF"/>
+                <circle cx="0" cy="0" r="10" fill="#FFF8B8" />
+                <circle cx="0" cy="0" r="5" fill="#FFFFFF" />
               </g>
             </svg>
             <div>
-              <p className="body"><b>Meet Pip</b> — a simple, friendly blob mascot that can blink, wiggle, and hold tiny signs (like “Hi!” or “New!”). Keep shapes simple so you can redraw or restyle easily. We can generate several poses (waving, typing at a laptop, carrying an envelope for Contact, etc.).</p>
+              <p className="body">
+                <b>Meet Pip</b> — a simple, friendly blob mascot that can blink,
+                wiggle, and hold tiny signs (like “Hi!” or “New!”). Keep shapes
+                simple so you can redraw or restyle easily. We can generate
+                several poses (waving, typing at a laptop, carrying an envelope
+                for Contact, etc.).
+              </p>
               <p className="body">Brand roles for Pip:</p>
               <ul className="body">
                 <li>Guide users (e.g., points to your CTA)</li>
-                <li>Add personality (idle animations: blink, bounce, sparkle)</li>
+                <li>
+                  Add personality (idle animations: blink, bounce, sparkle)
+                </li>
                 <li>Appear as tiny stickers around project cards</li>
               </ul>
             </div>
@@ -270,12 +383,30 @@ export default function DesignKit() {
         <section className="section">
           <h2>Implementation Notes</h2>
           <ol className="body">
-            <li><b>Background layer:</b> add/remove SVG elements in <code>.graffiti-layer</code> to change the mural vibe. Each has its own float speed class.</li>
-            <li><b>Scribble reveal:</b> duplicate the underline SVG and adjust the path curve; the keyframe <code>draw</code> animates stroke-dashoffset.</li>
-            <li><b>Bubbles:</b> replace with your real projects; non-rectangular feel comes from the uneven border-radius and paint-stroke header.</li>
-            <li><b>Mascot:</b> tweak the blob path points or gradient colours to explore styles; eyes share the <code>blink</code> keyframe.</li>
+            <li>
+              <b>Background layer:</b> add/remove SVG elements in{" "}
+              <code>.graffiti-layer</code> to change the mural vibe. Each has
+              its own float speed class.
+            </li>
+            <li>
+              <b>Scribble reveal:</b> duplicate the underline SVG and adjust the
+              path curve; the keyframe <code>draw</code> animates
+              stroke-dashoffset.
+            </li>
+            <li>
+              <b>Bubbles:</b> replace with your real projects; non-rectangular
+              feel comes from the uneven border-radius and paint-stroke header.
+            </li>
+            <li>
+              <b>Mascot:</b> tweak the blob path points or gradient colours to
+              explore styles; eyes share the <code>blink</code> keyframe.
+            </li>
           </ol>
-          <p className="small">v1 — We can expand with: parallax layers, hover sparkles, audio blips on click (accessible), and a doodle drawer that lets you place stickers live.</p>
+          <p className="small">
+            v1 — We can expand with: parallax layers, hover sparkles, audio
+            blips on click (accessible), and a doodle drawer that lets you place
+            stickers live.
+          </p>
         </section>
       </div>
     </div>
