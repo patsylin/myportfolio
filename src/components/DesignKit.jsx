@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import ProjectList from "./ProjectList.jsx";
 import About from "./About.jsx";
 import Contact from "./Contact.jsx";
+import Pip from "./Pip.jsx";
 
 /**
  * Patsy Lin — Whimsical Graffiti Design Kit v1
