@@ -1,4 +1,5 @@
 import React from "react";
+import Pip from "./Pip";
 
 export default function Contact() {
   return (
@@ -7,7 +8,7 @@ export default function Contact() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "180px 1fr",
+          gridTemplateColumns: "180px 1fr 120px",
           gap: 16,
           alignItems: "center",
         }}
@@ -52,6 +53,8 @@ export default function Contact() {
             />
           </circle>
         </svg>
+
+        {/* text and links */}
         <div className="body">
           <p style={{ marginTop: 0 }}>
             Got a role, project, or idea? I’d love to chat.
@@ -80,6 +83,9 @@ export default function Contact() {
             </a>
           </div>
         </div>
+
+        {/* cute Pip mascot on the right */}
+        <Pip size={120} sticker bounce />
       </div>
     </section>
   );
