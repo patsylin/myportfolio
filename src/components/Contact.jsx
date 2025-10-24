@@ -1,5 +1,5 @@
 import React from "react";
-import Pip from "./Pip";
+import Pip from "./Pip.jsx"; // make sure the file is src/components/Pip.jsx
 
 export default function Contact() {
   return (
@@ -8,7 +8,7 @@ export default function Contact() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "180px 1fr 120px",
+          gridTemplateColumns: "180px 1fr 120px", // 3 columns: envelope | text | Pip
           gap: 16,
           alignItems: "center",
         }}
@@ -43,7 +43,6 @@ export default function Contact() {
             strokeWidth="6"
             strokeLinecap="round"
           />
-          {/* sparkle */}
           <circle cx="142" cy="26" r="8" fill="#FFF8B8">
             <animate
               attributeName="r"
@@ -84,7 +83,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* cute Pip mascot on the right */}
+        {/* Pip shows here */}
         <Pip size={120} sticker bounce />
       </div>
     </section>
